@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "saranteman",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["/Users/antoniusyonanda/saranteman-website/serve.sh"],
+      "port": 8080
+    }
+  ]
+}
