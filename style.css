@@ -161,7 +161,7 @@ ul { list-style: none; }
 }
 
 .nav-logo-icon {
-  width: 140px;
+  width: 180px;
   height: auto;
   object-fit: contain;
   transition: opacity var(--transition);
@@ -348,7 +348,7 @@ ul { list-style: none; }
 }
 
 .hero-logo {
-  width: 240px;
+  width: 300px;
   height: auto;
   object-fit: contain;
   margin: 0 auto 24px;
@@ -645,20 +645,27 @@ ul { list-style: none; }
   box-shadow: var(--shadow-lg);
 }
 
-.about-card-icon {
-  width: 60px;
-  height: 54px;
-  color: var(--primary);
-  margin-bottom: 24px;
+.about-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
 }
 
-.about-card-icon svg { width: 100%; height: 100%; }
+.about-card-icon {
+  width: 44px;
+  height: auto;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.about-card-icon svg { width: 100%; height: auto; }
 
 .about-card h3 {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.5rem;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   color: var(--text-dark);
 }
 
@@ -914,9 +921,20 @@ ul { list-style: none; }
 .portfolio-campaign {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 16px;
   line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.portfolio-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .portfolio-stat {
@@ -1073,36 +1091,26 @@ ul { list-style: none; }
 
 .client-item {
   flex-shrink: 0;
-  padding: 14px 28px;
-  background: var(--bg-light);
-  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
-  height: 64px;
-  transition: all var(--transition);
-  border: 1px solid transparent;
+  width: 160px;
+  height: 70px;
+  transition: transform var(--transition);
 }
 
 .client-item img {
-  max-width: 100px;
-  max-height: 36px;
-  width: auto;
-  height: auto;
+  width: 140px;
+  height: 56px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.55);
-  transition: filter var(--transition);
-}
-
-.client-item:hover {
-  background: white;
-  border-color: rgba(123,45,142,0.1);
-  transform: scale(1.05);
+  object-position: center;
+  filter: grayscale(100%) opacity(0.5);
+  transition: filter var(--transition), transform var(--transition);
 }
 
 .client-item:hover img {
   filter: grayscale(0%) opacity(1);
+  transform: scale(1.08);
 }
 
 .clients-more {
